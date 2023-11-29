@@ -1,3 +1,7 @@
+//Descripci√≥n: Evalua un programa dependiendo de una opci√≥n elegida
+//Autor: Celeste Estefan√≠a Ram√≠rez Matehuala
+//Fecha: 29/11/2023
+
 SubProceso opcion <- menu
 	Definir opcion Como Entero;
 	
@@ -7,11 +11,11 @@ SubProceso opcion <- menu
 	Escribir "[2] Nombre vacio";
 	Escribir "[3] Secuencia de collatz";
 	Escribir "[4] Valida vocal";
-	Escribir "[5] ValidaciÛn de nombre";
-	Escribir "[6] ValidaciÛn de n˙mero entre rangos";
-	Escribir "[7] ValidaciÛn de Rango";
+	Escribir "[5] Validaci√≥n de nombre";
+	Escribir "[6] Validaci√≥n de n√∫mero entre rangos";
+	Escribir "[7] Validaci√≥n de Rango";
 	Escribir "[0] Salir";
-	Escribir Sin Saltar "Elige la opciÛn";
+	Escribir Sin Saltar "Elige la opci√≥n";
 	Leer opcion;
 FinSubProceso
 
@@ -56,10 +60,10 @@ Proceso Programas_Repetir
 			3:
 				
 				Definir n,contador Como Entero;
-				Escribir "Ingresa el n˙mero";
+				Escribir "Ingresa el n√∫mero";
 				Leer n;
 				contador<-1;
-				Escribir "Algoritmo en el que siempre se har· un preceso A UN DETERMINADO NUMERO dependiendo de si es PAR o IMPAR";
+				Escribir "Algoritmo en el que siempre se har√° un preceso A UN DETERMINADO NUMERO dependiendo de si es PAR o IMPAR";
 				Repetir
 					Si (n mod 2)=0 Entonces
 						n<-n/2;
@@ -75,7 +79,7 @@ Proceso Programas_Repetir
 				Repetir
 					Escribir Sin Saltar"Ingrese un caracter";
 					Leer vocal;
-				Hasta Que vocal="a" o vocal="e" o vocal="i" o vocal="o" o vocal="u" o vocal="·" o vocal="È" o vocal="Ì" o vocal="Û" o vocal="˙" 
+				Hasta Que vocal="a" o vocal="e" o vocal="i" o vocal="o" o vocal="u" o vocal="√°" o vocal="√©" o vocal="√≠" o vocal="√≥" o vocal="√∫" 
 				
 				Escribir "Has ingresado la vocal de forma correcta";
 			5:
@@ -92,20 +96,20 @@ Proceso Programas_Repetir
 				Escribir "";
 			6:
 				Definir numer Como Entero;
-				Escribir "Algoritmo que validar un n˙mero entre los rangos [1,10] y [40,50]";
+				Escribir "Algoritmo que validar un n√∫mero entre los rangos [1,10] y [40,50]";
 				Repetir
-					Escribir Sin Saltar "Ingresa un n˙mero entre los rango [1,10] y [40,50]";
+					Escribir Sin Saltar "Ingresa un n√∫mero entre los rango [1,10] y [40,50]";
 					Leer numer;
 				Hasta Que (numer<=10 y numer>=1) o (numer<=50 y numer>=40)
-				Escribir "Has ingresado el n˙mero adecuado";
+				Escribir "Has ingresado el n√∫mero adecuado";
 			7:
 				Definir num Como Entero;
 				Escribir "Algoritmo que valida si un numero esta entre el rango de [18,110]";
 				Repetir
-					Escribir Sin Saltar "Ingresa el n˙mero que entre en el rango [18,110]";
+					Escribir Sin Saltar "Ingresa el n√∫mero que entre en el rango [18,110]";
 					Leer num;
 				Hasta Que num>=18 y num<=110
-				Escribir "Has ingresado el n˙mero correctamente";
+				Escribir "Has ingresado el n√∫mero correctamente";
 				
 			De Otro Modo:
 				Escribir "No esta en el menu posiblemente";
@@ -115,6 +119,6 @@ Proceso Programas_Repetir
 		
 	Hasta Que opcion1=0
 	
-	Escribir "Hasta la prÛxima";
+	Escribir "Hasta la pr√≥xima";
 	
 FinProceso
