@@ -23,6 +23,28 @@ FinSubProceso
 Proceso Menu_de_programas
 	Definir opcion1 Como Entero;
 	
+	Definir valo,conteo,veces Como Entero;
+	Definir caract Como Caracter;
+	
+	Definir n1,d1,n2,d2,nf,df Como Entero; 
+	
+	Definir n,nums,i,num1,num2,result,mult Como Entero;
+	
+	Definir manzanas,hermanas,div Como Entero;
+	
+	Definir pares,conta,casas,ca,cb,vecino Como Entero;
+	Definir resultar Como Texto;
+	
+	Definir costo,prim,resultt Como Real;
+	Definir total Como Caracter;
+	
+	Definir u,x,z,operacion1,operacion2,resultado Como Real;
+	
+	Definir numerito,digit1,digit3 Como Caracter;
+	Definir long Como Entero;
+	
+	Definir d,m,a Como Entero;
+	
 	Repetir //Con este repetir traeremos una y otra vez el menu del subproceso hasta que sea [0] salir
 		Limpiar Pantalla; //Limpia los resultados de las opciones elegidas una vez ejecutadas
 		opcion1<-menu (); //Trae el menu.
@@ -38,11 +60,10 @@ Proceso Menu_de_programas
 			1:
 				Escribir "Contando enteros en línea";
 				Escribir "___________________________";
-				Definir valo,conteo,veces Como Entero;
-				Definir caract Como Caracter;
 				Escribir"Ingresa la linea de carcteres deseada y salta la linea cuando ya no desee ingresar más datos";
 				conteo<-0; 
 				veces<-0;
+				valo<-0;
 				Repetir
 					Escribir Sin Saltar "";
 					Leer caract; 
@@ -56,7 +77,6 @@ Proceso Menu_de_programas
 			2:
 				Escribir "Suma de fracciones simple";
 				Escribir "___________________________";
-				Definir n1,d1,n2,d2,nf,df Como Entero; 
 				Escribir "Ingrese a continuación los valores deseados en la fracción siguiendo en orden de numerador, denominador, numerador, denominador";
 				Escribir "Rango de valores permitido [1,20]";
 				Leer n1,d1,n2,d2;
@@ -71,11 +91,10 @@ Proceso Menu_de_programas
 					Escribir n1,"/",d1,"+",n2,"/",d2," = ",nf,"/",df;
 				SiNo
 					Escribir "Uno de los valores no esta en el rango permitido";
-				FinSi
+	FinSi
 			3:
 				Escribir "Producto punto sin arreglos";
 				Escribir "___________________________";
-				Definir n,nums,i,num1,num2,result,mult Como Entero;
 				Escribir "Ingresa la cantidad de pares de valores a evaluar";
 				Escribir "El rango de valores permitido es [1,10]";
 				Leer n;
@@ -105,7 +124,6 @@ Proceso Menu_de_programas
 			4:
 				Escribir "Repartir Par";
 				Escribir "___________________________";
-				Definir manzanas,hermanas,div Como Entero;
 				Escribir "Ingrese el número de manzanas que se tienen";
 				Escribir "Rango permitido [1,100]";
 				Leer manzanas;
@@ -125,8 +143,6 @@ Proceso Menu_de_programas
 			5:
 				Escribir "Números vecinos";
 				Escribir "___________________________";
-				Definir pares,conta,casas,i,ca,cb,vecino Como Entero;
-				Definir resultar Como Texto;
 				Escribir "ingresa el número de pares a evaluar";
 				Leer pares;
 				Si pares<=1000 y pares>=1 Entonces
@@ -173,9 +189,6 @@ Proceso Menu_de_programas
 			6:
 				Escribir "Roberto y el pago de peaje";
 				Escribir "___________________________";
-				Definir costo,prim,resultt Como Real;
-				Definir i Como Entero;
-				Definir total Como Caracter;
 				Escribir Sin Saltar"Ingresa el costo de la primera caseta";
 				Leer costo;
 				resultt<-0;
@@ -196,7 +209,6 @@ Proceso Menu_de_programas
 			7:
 				Escribir "Evaluando una expresión complicada";
 				Escribir "___________________________";
-				Definir u,x,z,operacion1,operacion2,resultado Como Real;
 				Escribir "Ingresa los valores x,y,z en ese orden sin pasar del rango [1,100]";
 				Leer x;
 				Leer u;
@@ -216,16 +228,14 @@ Proceso Menu_de_programas
 			8:
 				Escribir "3 digit palindrome";
 				Escribir "___________________________";
-				Definir numer,digit1,digit3 Como Caracter;
-				Definir i,long Como Entero;
 				Escribir "Ingresar el número de tres dígitos";
-				Leer numer;
+				Leer numerito;
 				long<-Longitud(numer);
 				Si long<>3 Entonces
 					Escribir "No es un dígito válido";
 				SiNo
-					digit1<-Subcadena(numer,0,0);
-					digit3<-Subcadena(numer,2,2);
+					digit1<-Subcadena(numerito,0,0);
+					digit3<-Subcadena(numerito,2,2);
 					Si digit1=digit3 Entonces
 						Escribir "True";
 					SiNo
@@ -235,7 +245,6 @@ Proceso Menu_de_programas
 			9:
 				Escribir "Fechas A";
 				Escribir "___________________________";
-				Definir d,m,a Como Entero;
 				Escribir"Ingresa la fecha en el orden día/mes/año";
 				Leer d,m,a;
 				Si (a mod 4)=0 Entonces
