@@ -1,22 +1,22 @@
-//Descripción: Algoritmo que ejecuta el proceso de sacar un menú de opciones para evaluar dentro de un proceso aparte
-//Autor: Celeste Estefanía Ramírez Matehuala
+//DescripciÃ³n: Algoritmo que ejecuta el proceso de sacar un menÃº de opciones para evaluar dentro de un proceso aparte
+//Autor: Celeste EstefanÃ­a RamÃ­rez Matehuala
 //Fecha: 02/12/2023
 SubProceso opcion <- menu //Subproceso son el menu de opciones
 	Definir opcion Como Entero;
 	
 	Escribir "Elige el programa a ejecutar";
 	Escribir "----------------";
-	Escribir "[1] Contando enteros en línea";
+	Escribir "[1] Contando enteros en lÃ­nea";
 	Escribir "[2] Suma de fracciones simple";
 	Escribir "[3] Producto punto sin arreglos";
 	Escribir "[4] Repartir Par";
-	Escribir "[5] Números vecinos";
+	Escribir "[5] NÃºmeros vecinos";
 	Escribir "[6] Roberto y el pago de peaje";
-	Escribir "[7] Evaluando una expresión complicada";
+	Escribir "[7] Evaluando una expresiÃ³n complicada";
 	Escribir "[8] 3 digit palindrome";
 	Escribir "[9] Fechas A";
 	Escribir "[0] Salir";
-	Escribir Sin Saltar "Elige la opción";
+	Escribir Sin Saltar "Elige la opciÃ³n";
 	Leer opcion;
 FinSubProceso
 
@@ -27,20 +27,20 @@ Proceso Menu_de_programas
 		Limpiar Pantalla; //Limpia los resultados de las opciones elegidas una vez ejecutadas
 		opcion1<-menu (); //Trae el menu.
 		
-		Si opcion1=0 Entonces //Accioón meramente estetica
+		Si opcion1=0 Entonces //AccioÃ³n meramente estetica
 			Escribir "___________________________";
 			Escribir "Procesando";
 		SiNo
 			Escribir "___________________________";
 			Escribir "Programa:";
 		FinSi
-		Segun opcion1 Hacer //Segun el valor elegido del menu, el algoritmo ejecutara algún programa de los que tiene guardados
+		Segun opcion1 Hacer //Segun el valor elegido del menu, el algoritmo ejecutara algÃºn programa de los que tiene guardados
 			1:
-				Escribir "Contando enteros en línea";
+				Escribir "Contando enteros en lÃ­nea";
 				Escribir "___________________________";
 				Definir valores,conteo,veces Como Entero;
 				Definir caract Como Caracter;
-				Escribir"Ingresa la linea de carcteres deseada y salta la linea cuando ya no desee ingresar más datos";
+				Escribir"Ingresa la linea de carcteres deseada y salta la linea cuando ya no desee ingresar mÃ¡s datos";
 				conteo<-0; 
 				veces<-0;
 				Repetir
@@ -57,7 +57,7 @@ Proceso Menu_de_programas
 				Escribir "Suma de fracciones simple";
 				Escribir "___________________________";
 				Definir n1,d1,n2,d2,nf,df Como Entero; 
-				Escribir "Ingrese a continuación los valores deseados en la fracción siguiendo en orden de numerador, denominador, numerador, denominador";
+				Escribir "Ingrese a continuaciÃ³n los valores deseados en la fracciÃ³n siguiendo en orden de numerador, denominador, numerador, denominador";
 				Escribir "Rango de valores permitido [1,20]";
 				Leer n1,d1,n2,d2;
 				Si (n1>=1 y n1<=20) y (n2>=1 y n2<=20) y (d1>=1 y d1<=20) y (d2>=1 y d2<=20) Entonces
@@ -71,7 +71,7 @@ Proceso Menu_de_programas
 					Escribir n1,"/",d1,"+",n2,"/",d2," = ",nf,"/",df;
 				SiNo
 					Escribir "Uno de los valores no esta en el rango permitido";
-	FinSi
+				FinSi
 			3:
 				Escribir "Producto punto sin arreglos";
 				Escribir "___________________________";
@@ -84,7 +84,7 @@ Proceso Menu_de_programas
 					num1<-0;
 					num2<-0;
 					result<-0;
-					Escribir "A continuación ingresa los valores";
+					Escribir "A continuaciÃ³n ingresa los valores";
 					Para i<-1 Hasta nums Con Paso 1 Hacer
 						Si (i mod 2)=0 Entonces
 							Leer num1;
@@ -106,10 +106,10 @@ Proceso Menu_de_programas
 				Escribir "Repartir Par";
 				Escribir "___________________________";
 				Definir manzanas,hermanas,div Como Entero;
-				Escribir "Ingrese el número de manzanas que se tienen";
+				Escribir "Ingrese el nÃºmero de manzanas que se tienen";
 				Escribir "Rango permitido [1,100]";
 				Leer manzanas;
-				Escribir "Ingresa en número de hermanas";
+				Escribir "Ingresa en nÃºmero de hermanas";
 				Escribir "Rango permitido [1,50]";
 				Leer hermanas;
 				Si (hermanas<=50 y hermanas>=1) y (manzanas<=100 y manzanas>=1) Entonces
@@ -123,14 +123,14 @@ Proceso Menu_de_programas
 					Escribir "Alguno de los valores ingresados esta fuera del rango permitido";
 				FinSi
 			5:
-				Escribir "Números vecinos";
+				Escribir "NÃºmeros vecinos";
 				Escribir "___________________________";
 				Definir pares,conta,casas,i,ca,cb,vecino Como Entero;
 				Definir resultar Como Texto;
-				Escribir "ingresa el número de pares a evaluar";
+				Escribir "ingresa el nÃºmero de pares a evaluar";
 				Leer pares;
 				Si pares<=1000 y pares>=1 Entonces
-					Escribir "A continuación ingresa los números de las casas";
+					Escribir "A continuaciÃ³n ingresa los nÃºmeros de las casas";
 					i<-1;
 					resultar<-""; 
 					conta<-0;
@@ -140,14 +140,14 @@ Proceso Menu_de_programas
 						Si (i mod 2)=0 Entonces
 							Leer ca;
 							Si ca>100 o ca<1 Entonces 
-								Escribir "No es un número de casa valido";
+								Escribir "No es un nÃºmero de casa valido";
 								ca<-(-1);
 							FinSi
 							i<-i+1;
 						SiNo
 							Leer cb;
 							si cb>100 o cb<1 Entonces
-								Escribir "No es un número de casa valido";
+								Escribir "No es un nÃºmero de casa valido";
 								cb<-(-1);
 							FinSi
 							i<-i+1;
@@ -168,7 +168,7 @@ Proceso Menu_de_programas
 					Hasta Que pares=conta o ca=(-1) o cb=(-1)
 					Escribir result;
 				SiNo
-					Escribir "Número de pares a evaluar no válido";
+					Escribir "NÃºmero de pares a evaluar no vÃ¡lido";
 	FinSi
 			6:
 				Escribir "Roberto y el pago de peaje";
@@ -182,7 +182,7 @@ Proceso Menu_de_programas
 				total<-" ";
 				prim<-costo;
 				Si costo<0 o costo>300 Entonces
-					Escribir "No es un costo válido";
+					Escribir "No es un costo vÃ¡lido";
 				SiNo
 					Para i<-1 Hasta 5 Con Paso 1 Hacer
 						total<-Concatenar(total,ConvertirATexto(costo)); 
@@ -194,7 +194,7 @@ Proceso Menu_de_programas
 					Escribir "[",total,"]";
 				FinSi
 			7:
-				Escribir "Evaluando una expresión complicada";
+				Escribir "Evaluando una expresiÃ³n complicada";
 				Escribir "___________________________";
 				Definir u,x,z,operacion1,operacion2,resultado Como Real;
 				Escribir "Ingresa los valores x,y,z en ese orden sin pasar del rango [1,100]";
@@ -218,11 +218,11 @@ Proceso Menu_de_programas
 				Escribir "___________________________";
 				Definir numer,digit1,digit3 Como Caracter;
 				Definir i,long Como Entero;
-				Escribir "Ingresar el número de tres dígitos";
+				Escribir "Ingresar el nÃºmero de tres dÃ­gitos";
 				Leer numer;
 				long<-Longitud(numer);
 				Si long<>3 Entonces
-					Escribir "No es un dígito válido";
+					Escribir "No es un dÃ­gito vÃ¡lido";
 				SiNo
 					digit1<-Subcadena(numer,0,0);
 					digit3<-Subcadena(numer,2,2);
@@ -236,13 +236,13 @@ Proceso Menu_de_programas
 				Escribir "Fechas A";
 				Escribir "___________________________";
 				Definir d,m,a Como Entero;
-				Escribir"Ingresa la fecha en el orden día/mes/año";
+				Escribir"Ingresa la fecha en el orden dÃ­a/mes/aÃ±o";
 				Leer d,m,a;
 				Si (a mod 4)=0 Entonces
 					Si m=1 o m=3 o m=5 o m=7 o m=8 o m=10 o m=12 Entonces 
 						d<-d+1;
 						Si d>32 Entonces
-							Escribir "Día no valido";
+							Escribir "DÃ­a no valido";
 						FinSi
 						Si d>31 Entonces 
 							m<-m+1;
@@ -321,5 +321,5 @@ Proceso Menu_de_programas
 		Esperar 3 Segundos;
 		
 	Hasta Que opcion1=0
-	Escribir "Hasta la próxima";
+	Escribir "Hasta la prÃ³xima";
 FinProceso
