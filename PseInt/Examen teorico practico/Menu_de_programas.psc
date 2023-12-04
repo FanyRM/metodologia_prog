@@ -38,7 +38,7 @@ Proceso Menu_de_programas
 			1:
 				Escribir "Contando enteros en línea";
 				Escribir "___________________________";
-				Definir valores,conteo,veces Como Entero;
+				Definir valo,conteo,veces Como Entero;
 				Definir caract Como Caracter;
 				Escribir"Ingresa la linea de carcteres deseada y salta la linea cuando ya no desee ingresar más datos";
 				conteo<-0; 
@@ -47,8 +47,8 @@ Proceso Menu_de_programas
 					Escribir Sin Saltar "";
 					Leer caract; 
 					Si caract<>"" Entonces
-						valores<-ConvertirANumero(caract);
-						conteo<-conteo+valores;
+						valo<-ConvertirANumero(caract);
+						conteo<-conteo+valo;
 					FinSi
 					veces<-veces+1;
 				Hasta Que caract="" 
